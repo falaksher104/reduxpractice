@@ -20,7 +20,9 @@ const Form = () => {
         value={title}
         onChange={(e) => {
           setTitle(e.target.value);
-            dispatch(secondSubmit({ title: e.target.value, desc: desc, price: price }));
+          dispatch(
+            secondSubmit({ title: e.target.value, desc: desc, price: price })
+          );
         }}
       />
       <input
@@ -29,8 +31,9 @@ const Form = () => {
         value={desc}
         onChange={(e) => {
           setDesc(e.target.value);
-            dispatch(secondSubmit({ title: title, desc: e.target.value, price: price }));
-
+          dispatch(
+            secondSubmit({ title: title, desc: e.target.value, price: price })
+          );
         }}
       />
       {price}
@@ -41,8 +44,9 @@ const Form = () => {
         onChange={(e) => {
           setPrice(e.target.value);
 
-            dispatch(secondSubmit({ title: title, desc: desc, price: e.target.value }));
-
+          dispatch(
+            secondSubmit({ title: title, desc: desc, price: e.target.value })
+          );
         }}
       />
     </div>
